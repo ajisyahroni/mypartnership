@@ -90,15 +90,19 @@ class PengajuanController extends Controller
             'getPenandatangan',
             'getUnreadChatCount'
         ]);
-        $query->where(function ($q) {
-            $q->where('created_at', '<', date('2025-12-12'));
-            $q->where('stats_kerma', 'Ajuan Baru');
-            $q->where('tgl_selesai', '0000-00-00 00:00:00');
+
+        $query->where(function ($q) use ($tanggalNull) {
+            $q->where(function ($q2) use ($tanggalNull) {
+                $q2
+                // ->where('created_at', '<', '2025-12-12')
+                ->where('stats_kerma', 'Ajuan Baru')
+                ->where('tgl_selesai', $tanggalNull);
+            });
+            // ->orWhere(function ($q2) {
+            //     $q2->where('created_at', '>', '2025-12-12');
+            // });
         });
 
-        $query->orwhere(function ($q) {
-            $q->where('created_at', '>', date('2025-12-12'));
-        });
 
         $query->where('tgl_selesai', $tanggalNull)
             ->FilterDokumen($request)
@@ -352,19 +356,20 @@ class PengajuanController extends Controller
                 ->orWhere('jenis_kerjasama', 'like', '%MoA%')
                 ->orWhere('jenis_kerjasama', 'like', '%MoU%');
         })
-            ->whereNot('tgl_selesai', '0000-00-00 00:00:00')
-            ->where(function ($q) {
-                $q->where('periode_kerma', 'notknown')
-                    ->where(function ($subQ) {
-                        $subQ->whereDate('awal', '<=', now());
-                        $subQ->orwhereDate('mulai', '<=', now());
-                    })
-                    ->orWhere(function ($q) {
-                        $q->where('periode_kerma', 'bydoc')
-                            ->whereDate('mulai', '<=', now())
-                            ->whereDate('selesai', '>=', now());
-                    });
-            })
+            // ->whereNot('tgl_selesai', '0000-00-00 00:00:00')
+            // ->where(function ($q) {
+            //     $q->where('periode_kerma', 'notknown')
+            //         ->where(function ($subQ) {
+            //             $subQ->whereDate('awal', '<=', now());
+            //             $subQ->orwhereDate('mulai', '<=', now());
+            //         })
+            //         ->orWhere(function ($q) {
+            //             $q->where('periode_kerma', 'bydoc')
+            //                 ->whereDate('mulai', '<=', now())
+            //                 ->whereDate('selesai', '>=', now());
+            //         });
+            // })
+            ->orderBy('nama_institusi', 'asc')
             ->get();
 
 
@@ -409,6 +414,7 @@ class PengajuanController extends Controller
 
             return view('pengajuan/edit', $data);
         } else {
+            // dd($data);   
             return view('pengajuan/tambah', $data);
         }
     }

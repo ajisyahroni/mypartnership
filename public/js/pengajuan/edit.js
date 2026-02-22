@@ -90,7 +90,8 @@ $(document).ready(function () {
                 const $opt = $(this);
                 const jenis = $opt.data("jenis_kerjasama");
 
-                if (!conditionFn(jenis)) return;
+                // if (!conditionFn(jenis)) return;
+                if(!$opt.data("nama_institusi")) return;
 
                 const nama = $opt.data("nama_institusi");
                 const jenisInstitusi = $opt.data("jenis_institusi");

@@ -42,23 +42,32 @@ class DokumenController extends Controller
 
     public function getData(Request $request)
     {
+        $tanggalNull = '0000-00-00 00:00:00';
         $query = PengajuanKerjaSama::select('*')
             ->with(['getLembaga', 'getPengusul', 'getVerifikator', 'getKabid', 'getPenandatangan']);
 
-        $query->where('created_at', '<', date('2025-12-12'));
-
-        $query->where(function ($q) {
-            $q->whereIn('stats_kerma', ['Lapor Kerma', 'Kerma Lama']);
-            $q->orwhere(function ($q1) {
-                $q1->where('stats_kerma', 'Ajuan Baru');
-                $q1->whereNot('tgl_selesai', '0000-00-00 00:00:00');
+         $query->where(function ($main) use ($tanggalNull) {
+            // BAGIAN 1
+            $main->where(function ($q) use ($tanggalNull) {
+              $q
+                // ->where('created_at', '<', '2025-12-12')
+                ->where(function ($inner) use ($tanggalNull) {
+                    $inner->whereIn('stats_kerma', ['Lapor Kerma', 'Kerma Lama'])
+                            ->orWhere(function ($x) use ($tanggalNull) {
+                                $x
+                                ->where('stats_kerma', 'Ajuan Baru');
+                                // ->where('tgl_selesai', '!=', $tanggalNull);
+                            });
+                });
             });
-        });
+            // BAGIAN 2
+            // ->orWhere(function ($q) use ($tanggalNull) {
+            //     $q->where('created_at', '>', '2025-12-12')
+            //     ->where('tgl_selesai', '!=', $tanggalNull);
+            //     });
 
-        $query->orwhere(function ($q) {
-            $q->where('created_at', '>', date('2025-12-12'));
-            $q->whereNot('tgl_selesai', '0000-00-00 00:00:00');
-        });
+            }
+        );
 
         $query->FilterDokumen($request);
 

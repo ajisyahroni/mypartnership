@@ -8,7 +8,8 @@ $(document).ready(function () {
     var table = $("#dataTable").DataTable({
         paging: true,
         lengthChange: true,
-        lengthMenu: [10, 25, 50, 75, 100],
+        // OVERIDE:dev7777
+        lengthMenu: [10, 25, 50, 75, 500, 50_000, 1e5],
         searching: true,
         ordering: true,
         info: true,
