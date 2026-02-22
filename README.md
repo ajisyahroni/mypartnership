@@ -102,3 +102,5 @@ docker exec -it laravel_app composer install
 docker cp ./db laravel_mysql:/
 docker exec -it laravel_mysql bash
 mysql -u root -p laravel < ./db/db.sql
+
+php artisan pengajuan:import laravel_kerma_db.xlsx --validate-only
