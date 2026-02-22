@@ -1,0 +1,350 @@
+/* ============================================
+   RESPONSIVE STYLES - MOBILE ONLY
+   Desktop dan Tablet menggunakan CSS asli
+   ============================================ */
+
+/* Base styles untuk semua device */
+body {
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HERO LOGIN SECTION - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    /* Pastikan row tidak overflow */
+    .hero-login .row {
+        margin: 0;
+    }
+
+    /* Left Section - Logo dan Gambar */
+    .hero-login .left-section {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem !important;
+        min-height: auto;
+    }
+
+    /* Logo & Text Container */
+    .hero-login .left-section > .d-flex:first-child {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Logo UMS lebih kecil */
+    .hero-login .left-section img[alt="Logo UMS"] {
+        height: 40px !important;
+    }
+
+    /* Text lebih kecil */
+    .hero-login .left-section h6 {
+        font-size: 10px !important;
+        line-height: 1.3;
+    }
+
+    .hero-login .left-section span {
+        font-size: 8px !important;
+    }
+
+    .vertical-divider {
+        height: 35px !important;
+        margin-left: 0.75rem !important;
+        margin-right: 0.75rem !important;
+    }
+
+    /* Image Container - PENTING: Jangan hilangkan gambar */
+    .hero-login .left-section .w-75 {
+        width: 85% !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Gambar Mahasiswa - Tetap tampil, disesuaikan */
+    .mahasiswa-ums {
+        width: 100%;
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+        display: block !important; /* PAKSA TAMPIL */
+    }
+
+    /* Right Section - Form */
+    .hero-login .right-section {
+        padding-top: 2rem !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Title bar lebih kecil */
+    .title-bar {
+        width: 50px !important;
+        height: 3px !important;
+    }
+
+    /* Heading lebih kecil */
+    .hero-login h1 {
+        font-size: 1.8rem !important;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Paragraf lebih kecil */
+    .hero-login .right-section > p {
+        font-size: 0.85rem !important;
+        line-height: 1.5;
+    }
+
+    /* Form styling */
+    .hero-login form {
+        width: 100%;
+        margin-top: 1.5rem !important;
+    }
+
+    .input-group {
+        margin-bottom: 1rem !important;
+    }
+
+    .form-control,
+    .input-group-text {
+        font-size: 0.9rem !important;
+        padding: 0.6rem 0.75rem !important;
+    }
+
+    /* Button container jadi vertical */
+    .hero-login .d-flex.align-items-center.gap-3 {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Buttons full width */
+    .btn-login,
+    .btn-google {
+        width: 100% !important;
+        justify-content: center;
+        padding: 0.65rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Text "or" di tengah */
+    .hero-login .d-flex.align-items-center.gap-3 > span {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    /* Download button */
+    .hero-login .right-section:last-child {
+        padding-top: 1rem !important;
+    }
+
+    .btn-download {
+        width: 100%;
+        font-size: 0.9rem !important;
+    }
+
+    /* Curva Background - hilangkan di mobile */
+    .curva-bg::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   SUMMARY DATA SECTION - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .summary-data {
+        padding: 2rem 0.5rem !important;
+    }
+
+    .summary-data .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .summary-data .col-md-3 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .summary-data .card {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .summary-data i {
+        font-size: 2rem !important;
+    }
+
+    .summary-data .summary-title {
+        font-size: 0.8rem !important;
+    }
+
+    .summary-data .display-number {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* ============================================
+   MODAL RESPONSIVE - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    .modal-content {
+        padding: 1rem !important;
+    }
+
+    .modal-header {
+        padding: 1rem 0;
+    }
+
+    .modal-body {
+        padding: 1rem 0;
+    }
+
+    #chartModal .modal-body .row {
+        flex-direction: column;
+    }
+
+    #chartModal .col-md-6 {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    #dalamNegeriChart,
+    #luarNegeriChart {
+        height: 250px !important;
+        width: 100% !important;
+    }
+
+    #chartModal h3 {
+        font-size: 1.3rem !important;
+    }
+
+    #chartModal h4 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Dokumen Modal */
+    #dokumenModal .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+}
+
+/* ============================================
+   SEBARAN MITRA / MAP SECTION - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    #mitra {
+        padding: 2rem 1rem !important;
+    }
+
+    #mitra h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem;
+    }
+
+    #regions_div {
+        height: 300px !important;
+        width: 100% !important;
+    }
+}
+
+/* ============================================
+   FOOTER SECTION - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .footer-section {
+        padding: 1.5rem 0 !important;
+    }
+
+    .footer-section .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-section .d-flex.align-items-center {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .footer-section img[alt="UMS Logo"] {
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem;
+        height: 40px !important;
+    }
+
+    .footer-section .border-start {
+        border-start: none !important;
+        padding-left: 0 !important;
+        font-size: 0.85rem;
+    }
+
+    .footer-section h6 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-section ul li,
+    .footer-section a {
+        font-size: 0.85rem;
+    }
+
+    .map-decorator .purple-bg,
+    .map-decorator .yellow-bg,
+    .map-decorator .white-bg {
+        height: 25px !important;
+    }
+}
+
+/* ============================================
+   PREVENT HORIZONTAL SCROLL - ALL DEVICES
+   ============================================ */
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ============================================
+   IMAGE VISIBILITY FIX - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    /* Pastikan gambar SELALU tampil di mobile */
+    .mahasiswa-ums {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .hero-login .left-section .w-75 {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
+/* ============================================
+   SCROLL ANIMATION ADJUSTMENTS - MOBILE ONLY
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .scroll-animate {
+        animation-duration: 0.5s !important;
+    }
+}

@@ -1,0 +1,777 @@
+/* ============================================
+   RESPONSIVE STYLES - Full Dashboard System
+   ============================================ */
+
+/* ============================================
+   BASE FIXES
+   ============================================ */
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* ============================================
+   NAVBAR / HEADER RESPONSIVE
+   ============================================ */
+
+/* Mobile - Poco X5 (< 768px) */
+@media (max-width: 767.98px) {
+    /* Top Navbar */
+    .app-header .navbar {
+        padding: 0.5rem 1rem !important;
+        max-height: auto !important;
+    }
+
+    /* Brand Logo */
+    .brand-logo {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .brand-logo img {
+        width: 28px !important;
+    }
+
+    .title-sidebar {
+        font-size: 12px !important;
+        display: none; /* Hide text on very small screens */
+    }
+
+    /* Mobile Toggle Button */
+    #toggle-mobile {
+        display: block !important;
+    }
+
+    /* Hide desktop menu */
+    #menuNavWrap {
+        display: none !important;
+    }
+
+    /* Navbar Items */
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    /* Dropdown Buttons */
+    .btn-sm {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 11px !important;
+    }
+
+    /* Hide text in buttons, show only icons */
+    .btn-sm .d-none.d-md-inline {
+        display: none !important;
+    }
+
+    /* Profile Image */
+    .navbar img.rounded-circle {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        font-size: 0.85rem;
+        min-width: 200px;
+    }
+
+    .keep-inside-screen {
+        position: fixed !important;
+        max-width: 90vw;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+/* ============================================
+   MOBILE SIDEBAR
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .mobile-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        z-index: 9999;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-sidebar.show {
+        left: 0;
+    }
+
+    .mobile-sidebar .sidebar-item {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .mobile-sidebar .sidebar-link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        color: #333;
+    }
+
+    .mobile-sidebar .collapse {
+        padding-left: 1rem;
+    }
+
+    .scroll-bar-custom {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+    }
+
+    /* Search in sidebar */
+    #search-template {
+        padding: 0.75rem 1.25rem;
+    }
+
+    #search-template .input {
+        width: 100% !important;
+        font-size: 0.85rem;
+    }
+
+    /* Username truncate */
+    .username-truncate {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* ============================================
+   CONTENT AREA - HOME DASHBOARD
+   ============================================ */
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .body-konten {
+        padding: 0.5rem !important;
+    }
+
+    /* Content padding adjustments from previous CSS */
+    .container-fluid {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    .content {
+        padding-top: 0.5rem !important;
+    }
+
+    /* Profile Cards */
+    .profile-card {
+        padding: 1rem !important;
+        margin-bottom: 0.75rem;
+    }
+
+    .profile-badge {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.3rem !important;
+    }
+
+    .profile-label {
+        font-size: 0.75rem !important;
+    }
+
+    .profile-title {
+        font-size: 0.9rem !important;
+    }
+
+    .profile-position-badge {
+        font-size: 0.7rem !important;
+        padding: 0.2rem 0.4rem !important;
+    }
+
+    /* Content Sections */
+    .content-section {
+        padding: 0.75rem !important;
+        margin-bottom: 0.75rem;
+    }
+
+    .title-dashboard {
+        font-size: 1rem !important;
+    }
+
+    /* Ranking Cards */
+    .ranking-card {
+        padding: 1rem !important;
+    }
+
+    .point-box {
+        font-size: 1.75rem !important;
+        padding: 1.25rem !important;
+    }
+
+    /* Tables */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .ranking-table {
+        font-size: 0.8rem !important;
+        min-width: 100%;
+    }
+
+    .ranking-table th,
+    .ranking-table td {
+        padding: 0.4rem !important;
+        white-space: nowrap;
+    }
+
+    /* Charts */
+    #chart_kerma_dn,
+    #chart_kerma_ln,
+    #chart_implementasi_dn,
+    #chart_implementasi_ln,
+    #lineChartKerjasama,
+    #lineChartKerjasamaProduktif {
+        height: 250px !important;
+    }
+
+    /* Maps */
+    #mapid,
+    #mapid_produktif {
+        height: 300px !important;
+    }
+
+    /* Buttons */
+    .btn-selengkapnya {
+        font-size: 0.8rem !important;
+        padding: 0.4rem !important;
+    }
+
+    /* DataTables */
+    #dataTable2_wrapper {
+        overflow-x: auto;
+    }
+
+    #dataTable2 {
+        font-size: 0.8rem;
+    }
+
+    /* Filter Section */
+    .form-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .form-control,
+    .select2 {
+        font-size: 0.85rem !important;
+    }
+
+    /* Download Button */
+    .btn-success {
+        font-size: 0.85rem !important;
+        padding: 0.5rem !important;
+    }
+
+    /* Modal Adjustments */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    .modal-content {
+        padding: 0.5rem;
+    }
+
+    .modal-xl,
+    .modal-lg {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 1rem 0.5rem !important;
+    }
+
+    .footer-section .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-section img[alt="UMS Logo"] {
+        height: 40px !important;
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section .border-start {
+        border-start: none !important;
+        padding-left: 0 !important;
+        font-size: 0.8rem;
+    }
+
+    .footer-section h6 {
+        font-size: 0.9rem !important;
+    }
+
+    .footer-section ul li,
+    .footer-section a {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   TABLET (768px - 1199px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    /* Navbar */
+    .app-header .navbar {
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    .brand-logo img {
+        width: 32px !important;
+    }
+
+    .title-sidebar {
+        font-size: 13px !important;
+    }
+
+    /* Show desktop menu */
+    #menuNavWrap {
+        display: block !important;
+    }
+
+    #menuNavWrap .navbar-nav {
+        flex-wrap: wrap;
+    }
+
+    #menuNavWrap .nav-link {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    /* Hide mobile toggle */
+    #toggle-mobile {
+        display: none !important;
+    }
+
+    /* Dropdown */
+    .btn-sm {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 12px !important;
+    }
+
+    /* Content Area */
+    .body-konten {
+        padding: 1rem !important;
+    }
+
+    .container-fluid {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* Profile Cards */
+    .profile-card {
+        padding: 1.25rem !important;
+    }
+
+    .profile-badge {
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .profile-title {
+        font-size: 1rem !important;
+    }
+
+    /* Content Sections */
+    .content-section {
+        padding: 1.25rem !important;
+    }
+
+    .title-dashboard {
+        font-size: 1.2rem !important;
+    }
+
+    /* Ranking Cards */
+    .ranking-card {
+        padding: 1.25rem !important;
+    }
+
+    .point-box {
+        font-size: 2.25rem !important;
+        padding: 1.75rem !important;
+    }
+
+    /* Tables */
+    .ranking-table {
+        font-size: 0.85rem !important;
+    }
+
+    .ranking-table th,
+    .ranking-table td {
+        padding: 0.5rem !important;
+    }
+
+    /* Charts */
+    #chart_kerma_dn,
+    #chart_kerma_ln,
+    #chart_implementasi_dn,
+    #chart_implementasi_ln,
+    #lineChartKerjasama,
+    #lineChartKerjasamaProduktif {
+        height: 280px !important;
+    }
+
+    /* Maps */
+    #mapid,
+    #mapid_produktif {
+        height: 350px !important;
+    }
+
+    /* DataTables */
+    #dataTable2 {
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    .footer-section .container {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
+   DESKTOP (≥ 1200px)
+   Let default styles handle desktop
+   ============================================ */
+
+@media (min-width: 1200px) {
+    /* Ensure mobile elements are hidden */
+    #toggle-mobile {
+        display: none !important;
+    }
+
+    .mobile-sidebar {
+        display: none !important;
+    }
+
+    /* Full menu visible */
+    #menuNavWrap {
+        display: block !important;
+    }
+}
+
+/* ============================================
+   WHATSAPP BUTTON RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .flow-button {
+        bottom: 70px !important;
+        right: 15px !important;
+    }
+
+    .whatsapp-button {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .whatsapp-button svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .tooltip {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   LEAFLET MAP RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .leaflet-control-zoom {
+        margin: 5px !important;
+    }
+
+    .leaflet-control-zoom a {
+        width: 24px !important;
+        height: 24px !important;
+        line-height: 24px !important;
+        font-size: 16px !important;
+    }
+
+    .leaflet-control {
+        font-size: 0.75rem !important;
+    }
+
+    .info.legend {
+        padding: 6px 8px !important;
+        font-size: 11px !important;
+    }
+
+    .custom-tooltip {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .leaflet-control-zoom a {
+        width: 28px !important;
+        height: 28px !important;
+        line-height: 28px !important;
+    }
+
+    .info.legend {
+        font-size: 12px !important;
+    }
+}
+
+/* ============================================
+   SELECT2 RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .select2-container {
+        font-size: 0.85rem !important;
+    }
+
+    .select2-container .select2-selection {
+        min-height: 36px !important;
+    }
+
+    .select2-dropdown {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ============================================
+   MODAL RESPONSIVE ENHANCEMENTS
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .modal-header {
+        padding: 0.75rem !important;
+    }
+
+    .modal-title {
+        font-size: 1rem !important;
+    }
+
+    .modal-body {
+        padding: 0.75rem !important;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    .modal-footer {
+        padding: 0.75rem !important;
+    }
+
+    .modal-footer .btn {
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0.75rem !important;
+    }
+
+    /* Pemberitahuan Modal */
+    #modal-pemberitahuan .modal-body {
+        padding: 0.75rem !important;
+    }
+
+    #modal-pemberitahuan .alert {
+        font-size: 0.8rem !important;
+        padding: 0.5rem !important;
+    }
+
+    #modal-pemberitahuan .card-body {
+        padding: 0.75rem !important;
+    }
+
+    #modal-pemberitahuan h6 {
+        font-size: 0.85rem !important;
+    }
+
+    #modal-pemberitahuan p {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* ============================================
+   TOOLTIP RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .tooltip-body {
+        font-size: 0.75rem !important;
+        padding: 4px 8px !important;
+        max-width: 200px;
+    }
+
+    .tooltip-arrow {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* ============================================
+   CUSTOM DROPDOWN RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .custom-dropdown {
+        font-size: 0.85rem !important;
+        max-width: 90vw;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .custom-dropdown .btn {
+        font-size: 0.8rem !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+}
+
+/* ============================================
+   TOUCH OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 1199.98px) {
+    .btn,
+    .nav-link,
+    .sidebar-link,
+    a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        touch-action: manipulation;
+    }
+
+    /* Larger tap targets */
+    .btn,
+    .nav-link {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+@media (max-width: 1199.98px) {
+    .table-wrapper::-webkit-scrollbar,
+    .modal-body::-webkit-scrollbar,
+    .mobile-sidebar::-webkit-scrollbar,
+    .scroll-bar-custom::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-track,
+    .modal-body::-webkit-scrollbar-track,
+    .mobile-sidebar::-webkit-scrollbar-track,
+    .scroll-bar-custom::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb,
+    .modal-body::-webkit-scrollbar-thumb,
+    .mobile-sidebar::-webkit-scrollbar-thumb,
+    .scroll-bar-custom::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+}
+
+/* ============================================
+   HIGHCHARTS RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767.98px) {
+    .highcharts-container {
+        font-size: 11px !important;
+    }
+
+    .highcharts-legend-item {
+        font-size: 10px !important;
+    }
+
+    .highcharts-axis-labels {
+        font-size: 10px !important;
+    }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   LANDSCAPE MODE - MOBILE
+   ============================================ */
+
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .app-header .navbar {
+        padding: 0.25rem 0.75rem !important;
+    }
+
+    .profile-card {
+        padding: 0.75rem !important;
+    }
+
+    .content-section {
+        padding: 0.5rem !important;
+    }
+
+    #mapid,
+    #mapid_produktif {
+        height: 250px !important;
+    }
+
+    .modal-body {
+        max-height: 50vh;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .app-header,
+    .mobile-sidebar,
+    .flow-button,
+    .btn-selengkapnya,
+    .btn-export-proposal,
+    .btn-export-laporan,
+    .modal {
+        display: none !important;
+    }
+
+    .body-konten {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+    }
+}

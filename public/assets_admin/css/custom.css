@@ -1,0 +1,2879 @@
+.body-konten {
+    background-color: #f9f9f9;
+    min-height: 680px;
+}
+
+/* Laptop Kecil (1025px - 1280px) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Laptop Besar / Desktop (1281px - 1440px) */
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .body-konten {
+        min-height: 1030px;
+    }
+}
+
+/* Lebih dari 1440px (Layar Lebih Besar) */
+@media screen and (min-width: 1441px) {
+    .body-konten {
+        min-height: 1200px;
+    }
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.toggle-button-cover {
+    position: absolute;
+}
+/* .toggle-button-cover {
+display: table-cell;
+position: relative;
+width: 100px;
+box-sizing: border-box;
+} */
+
+.button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    /* background-color: #ebf7fc; */
+    background-color: #fcebeb;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#button-3 .knobs:before {
+    /* content: "ON"; */
+    content: "OFF";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    /* background-color: #03a9f4; */
+    background-color: #f44336;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+#button-3 .checkbox:active + .knobs:before {
+    width: 46px;
+    border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs:before {
+    /* content: "OFF"; */
+    content: "ON";
+    left: 42px;
+    /* left: 4px; */
+    background-color: #03a9f4;
+    /* background-color: #f44336; */
+}
+
+#button-3 .checkbox:checked ~ .layer {
+    background-color: #ebf7fc;
+}
+
+/* .sidebar-item {
+width: 100%;
+display: block;
+clear: both;
+color: #fff;
+text-decoration: none;
+line-height: 45px;
+padding-left: 15px;
+font-size: 16px;
+}
+
+.sidebar-link {
+color: #adb5bd;
+transition: all 0.3s;
+}
+
+.sidebar-link:hover {
+color: #ffffff;
+}
+
+.first-level {
+margin-left: 10px;
+}
+
+.first-level .sidebar-item .sidebar-link {
+font-size: 14px;
+color: #ced4da;
+}
+
+.first-level .sidebar-item .sidebar-link:hover {
+color: #dee2e6;
+}
+
+.ti {
+font-size: 18px;
+vertical-align: middle;
+}
+.sub-menu {
+font-size: 12px !important;
+}
+
+.sidebar-item > .sub-menu.active {
+background-color: #95b0ff !important;
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+}
+
+.sidebar-item > .sub-menu {
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+} */
+
+.btn-danger {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f44747;
+    --bs-btn-border-color: #f44747;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d5745b;
+    --bs-btn-hover-border-color: #c86e56;
+    --bs-btn-focus-shadow-rgb: 251, 155, 129;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #c86e56;
+    --bs-btn-active-border-color: #bc6750;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #f44747;
+    --bs-btn-disabled-border-color: #f44747;
+}
+
+.link-danger {
+    color: #f44747 !important;
+}
+
+.btn-outline-danger {
+    --bs-btn-color: #f44747;
+    --bs-btn-border-color: #f44747;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #f44747;
+    --bs-btn-hover-border-color: #f44747;
+    --bs-btn-focus-shadow-rgb: 250, 137, 107;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #f44747;
+    --bs-btn-active-border-color: #f44747;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #f44747;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #f44747;
+    --bs-gradient: none;
+}
+
+/* Style untuk pita */
+.corner-ribbon {
+    width: 100px;
+    background: #3498db;
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    /* Penyesuaian posisi kanan */
+    text-align: center;
+    line-height: 20px;
+    /* Mengatur tinggi pita */
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    font-size: 0.75em;
+    color: white;
+    z-index: 10;
+    /* Pastikan pita di atas semua elemen */
+}
+
+/* Style umum untuk card */
+.card-paket {
+    position: relative;
+    overflow: hidden;
+    /* Pastikan semua elemen seperti pita tidak melebihi batas card */
+    border-radius: 8px;
+    /* Memberi border radius untuk estetika */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-paket:hover {
+    transform: scale(1.005);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling tambahan untuk judul, harga, dan deskripsi */
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* Style untuk list dan button */
+.list-group-item {
+    font-size: 0.85rem;
+    background-color: transparent;
+    border: none;
+}
+
+.username-truncate {
+    display: inline-block;
+    max-width: 130px; /* sesuaikan lebar maksimum */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.two-line-truncate {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Atur ketinggian baris */
+    max-height: 2.4em; /* Tinggi maksimal = line-height * jumlah baris */
+    margin-bottom: 10px; /* Jarak ke elemen berikutnya */
+}
+
+.three-line-truncate {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Atur ketinggian baris */
+    max-height: 3.6em; /* Tinggi maksimal = line-height * jumlah baris */
+    margin-bottom: 10px; /* Jarak ke elemen berikutnya */
+}
+
+.four-line-truncate {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Atur ketinggian baris */
+    max-height: 4.8em; /* Tinggi maksimal = line-height * jumlah baris */
+    margin-bottom: 10px; /* Jarak ke elemen berikutnya */
+}
+
+.five-line-truncate {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Jumlah baris yang diinginkan */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Atur ketinggian baris */
+    max-height: 6em; /* Tinggi maksimal = line-height * jumlah baris */
+    margin-bottom: 10px; /* Jarak ke elemen berikutnya */
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagination a {
+    color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-link {
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.text-danger {
+    color: #f44747 !important;
+}
+
+.accordion-button::after {
+    margin-bottom: auto;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #495057;
+    background-color: #ffffff;
+}
+
+.accordion-item {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.accordion-header {
+    padding: 0;
+}
+
+.bg-biru {
+    background: linear-gradient(120deg, #146aeb 0%, #376a9c 100%);
+}
+
+.ck-editor__editable_inline {
+    height: 200px;
+}
+
+.active > .page-link,
+.page-link.active {
+    color: var(--bs-pagination-active-color) !important;
+}
+
+#wifi-loader {
+    --background: #62abff;
+    --front-color: #4f29f0;
+    --back-color: #c3c8de;
+    --text-color: #414856;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wifi-loader svg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wifi-loader svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(-100deg);
+    transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+    stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+    stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+    height: 86px;
+    width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+    stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+    animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+    animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+    height: 60px;
+    width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+    stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+    animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+    animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+    height: 34px;
+    width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+    stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+    animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+    animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+    content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+    color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+    color: var(--front-color);
+    animation: text-animation76 3.6s ease infinite;
+    position: absolute;
+    left: 0;
+}
+
+@keyframes circle-outer135 {
+    0% {
+        stroke-dashoffset: 25;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 301;
+    }
+
+    80% {
+        stroke-dashoffset: 276;
+    }
+
+    100% {
+        stroke-dashoffset: 276;
+    }
+}
+
+@keyframes circle-middle6123 {
+    0% {
+        stroke-dashoffset: 17;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 204;
+    }
+
+    80% {
+        stroke-dashoffset: 187;
+    }
+
+    100% {
+        stroke-dashoffset: 187;
+    }
+}
+
+@keyframes circle-inner162 {
+    0% {
+        stroke-dashoffset: 9;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 106;
+    }
+
+    80% {
+        stroke-dashoffset: 97;
+    }
+
+    100% {
+        stroke-dashoffset: 97;
+    }
+}
+
+@keyframes text-animation76 {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    50% {
+        clip-path: inset(0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+#search-template .InputContainer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        45deg,
+        rgba(13, 110, 253, 0.7),
+        rgba(0, 123, 255, 0.7)
+    );
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Menambahkan animasi */
+}
+
+#search-template .InputContainer:focus-within {
+    background: linear-gradient(
+        45deg,
+        rgba(0, 123, 255, 0.9),
+        rgba(13, 110, 253, 0.9)
+    ); /* Efek saat input aktif */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Efek saat input aktif */
+}
+
+#search-template .input {
+    width: 170px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    caret-color: #ff5100; /* Warna kursor */
+    background: transparent; /* Transparan agar gradien terlihat */
+    color: #fff; /* Teks putih */
+    font-weight: bold; /* Teks tebal */
+    transition: all 0.3s ease; /* Efek saat input fokus */
+}
+
+#search-template .input:focus {
+    width: 250px; /* Membesarkan input saat fokus */
+}
+
+#search-template .input::placeholder {
+    color: #fff; /* Placeholder putih */
+    font-weight: bold; /* Placeholder tebal */
+}
+
+#search-template .labelforsearch {
+    cursor: text;
+    padding: 0px 12px;
+}
+
+#search-template .searchIcon {
+    width: 13px;
+}
+
+#search-template .searchIcon path {
+    fill: #fff; /* Warna putih untuk SVG */
+}
+
+#search-template .InputContainer:hover {
+    cursor: pointer; /* Mengubah cursor saat hover di seluruh kontainer */
+}
+
+/* Fokus otomatis saat input aktif */
+#search-template .InputContainer:focus-within .input {
+    background-color: rgba(0, 123, 255, 0.1); /* Efek saat fokus */
+}
+
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .app-header {
+    z-index: 999;
+}
+
+/* .btn-group-sm > .btn,
+.btn-sm {
+--bs-btn-padding-y: 0.1rem;
+--bs-btn-padding-x: 0.5rem;
+--bs-btn-font-size: 0.665625rem;
+--bs-btn-border-radius: 5px;
+} */
+
+.image-preview {
+    height: 200px;
+    width: 100%;
+    /* Sesuaikan dengan kebutuhan */
+    overflow: hidden;
+    /* Supaya gambar yang lebih besar tidak keluar */
+    position: relative;
+}
+
+.image-preview img {
+    height: 100%;
+    /* Isi penuh secara vertikal */
+    width: 100%;
+    /* Isi penuh secara horizontal */
+    object-fit: cover;
+    /* Pastikan gambar tidak terdistorsi */
+    position: absolute;
+    /* Agar gambar tetap terpusat */
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #1ab7e5, #51c4a7);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gradient-green:hover {
+    background: linear-gradient(135deg, #33cefb, #51c4a7);
+    transform: scale(1.01);
+    color: white;
+}
+
+.gradient-warning {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gradient-warning:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.01);
+    color: white;
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gradient-blue:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    color: white;
+}
+
+/* Modal backdrop blur */
+.modal-backdrop {
+    backdrop-filter: blur(10px); /* Increase blur intensity */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(255, 255, 255, 0.5);
+
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom modal content */
+.modal-content {
+    border-radius: 15px; /* Rounded corners */
+    border: none; /* Remove border */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    background-color: #ffffff; /* White background */
+}
+
+/* Modal header custom style */
+.modal-header {
+    /* background-color: #f8f9fa; */
+    border-bottom: 2px solid #dee2e6; /* Slightly thicker border */
+    border-radius: 15px 15px 0 0; /* Match with modal corners */
+}
+
+/* Modal footer custom style */
+.modal-footer {
+    /* background-color: #f8f9fa; */
+    border-radius: 0 0 15px 15px; /* Match with modal corners */
+}
+
+.modal-header .btn-close {
+    position: relative;
+    background-color: white;
+    /* Default background */
+    border: 2px solid red;
+    /* Lingkaran merah */
+    border-radius: 50%;
+    /* Membuat tombol menjadi lingkaran */
+    width: 10px;
+    /* Lebar tombol */
+    height: 10px;
+    /* Tinggi tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    /* Animasi */
+    --bs-btn-close-bg: none;
+}
+.modal-header .btn-close::before {
+    content: "\00d7";
+    /* Simbol "x" */
+    color: red;
+    /* Warna "x" */
+    font-size: 20px;
+    /* Ukuran font */
+    /* font-weight: bold; */
+    position: relative;
+    bottom: 3px;
+}
+
+.modal-header .btn-close:hover {
+    background-color: red;
+    /* Warna latar saat hover */
+    transform: scale(1.1);
+    /* Efek zoom */
+}
+
+.modal-header .btn-close:hover::before {
+    color: white;
+    /* Warna "x" berubah jadi putih saat hover */
+}
+
+.li-checklist ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default padding */
+}
+
+.li-checklist ul li {
+    position: relative;
+    padding-left: 25px; /* Space for the checkmark */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.li-checklist ul li::before {
+    content: "\2714"; /* Unicode for checkmark */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745; /* Green color */
+    font-size: 1.25rem; /* Size of the checkmark */
+    font-weight: bold; /* Make the checkmark bold */
+}
+
+.subscription-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.subscription-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.activation-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.activation-info h6 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.activation-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.activation-info .bx {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    color: #6a11cb;
+}
+
+/* General Table Styling */
+#dataTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px; /* Spacing antara baris */
+    font-family: "Poppins", sans-serif; /* Gunakan font modern */
+}
+
+#dataTable td {
+    /* background-color: #ffffff;
+padding: 12px 15px; */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Styling untuk Info Box */
+.info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.info-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-box .icon {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #6a11cb;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #777;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Styling untuk Status */
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-default {
+    background-color: #6c757d !important;
+}
+
+.btn-biru {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 91, 187, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-biru:hover {
+    background: linear-gradient(135deg, #0056b3, #003580);
+    box-shadow: 0px 6px 12px rgba(0, 56, 128, 0.5);
+}
+
+.btn-biru:active {
+    transform: scale(0.95);
+}
+
+.role-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 160px;
+    padding: 10px 5px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.dropdown-item.active {
+    border-radius: 10px;
+    background: #9cb7ff;
+    color: #224ab8;
+}
+
+.dropdown-item:hover {
+    border-radius: 10px;
+    background: #9cb7ff;
+    color: #224ab8;
+}
+
+.show {
+    display: block;
+}
+
+.sidebar-item .sidebar-link.active i {
+    color: white !important;
+}
+
+.form-control:focus {
+    border: var(--bs-border-width) solid #1f62d1;
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border: 2px solid #007bff;
+    width: 200px;
+}
+
+.card-profile .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #007bff;
+    flex-shrink: 0;
+}
+
+.card-profile .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-profile .profile-info {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-profile .profile-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-profile .profile-job {
+    font-weight: 400;
+    color: #666;
+    font-size: 12px;
+    margin: 3px 0 0 0;
+}
+
+.profile-status {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.status-online {
+    background-color: #28a745; /* Hijau */
+}
+
+.status-offline {
+    background-color: #6c757d; /* Abu-abu */
+}
+
+.btn-primary {
+    background: #007bff;
+}
+
+.bg-primary {
+    background: #007bff;
+}
+
+.scroll-bar-custom {
+    /* max-height: calc(100vh - 180px); */
+    max-height: calc(85vh - 180px);
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.scroll-bar-custom::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-bar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scroll-bar-custom::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.scroll-bar-custom::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+div.dt-container .dt-search input {
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #ddd !important;
+    transition: all 0.3s ease-in-out !important;
+    font-size: 12px;
+}
+
+div.dt-container .dt-search input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+div.dt-container select.dt-input {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+#usersTable_wrapper {
+    font-size: 12px;
+}
+
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+}
+
+.custom-table thead {
+    border-radius: 12px;
+}
+
+.custom-table thead tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.custom-table thead tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.custom-table tbody tr {
+    background-color: #f8f9fa;
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.custom-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.custom-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.dt-paging-button {
+    border-radius: 5px !important;
+    background: white !important;
+}
+
+.sidebar-item {
+    padding-top: 5px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    /* #main-wrapper[data-layout="vertical"][data-header-position="fixed"][data-sidebartype="mini-sidebar"]
+        .app-header {
+        width: 1250px !important;
+        left: 100px !important;
+    }
+
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"][data-sidebartype="mini-sidebar"]
+        .body-wrapper {
+        width: 1300px !important;
+        padding: 0px;
+        left: 80px !important;
+    } */
+}
+
+@media (min-width: 1440px) {
+    /* #main-wrapper[data-layout="vertical"][data-header-position="fixed"][data-sidebartype="mini-sidebar"]
+        .app-header {
+        width: 1360px !important;
+        left: 100px !important;
+    }
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"][data-sidebartype="mini-sidebar"]
+        .body-konten {
+        width: 100% !important;
+        left: -60px !important;
+    } */
+}
+
+.title-sidebar {
+    font-size: 14px;
+}
+
+.custom-table {
+    table-layout: auto !important;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.select2-container--bootstrap-5 .select2-selection {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 6px);
+    padding: 8px 16px !important;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid #dfe5ef;
+    border-radius: 7px;
+    appearance: none;
+}
+
+.select2-container--bootstrap-5
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: #5a6a85 !important;
+}
+
+.select2-container--bootstrap-5
+    .select2-dropdown
+    .select2-results__options
+    .select2-results__option {
+    font-size: 0.875rem !important;
+    color: #302f2f;
+}
+
+.select2-search__field {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10000 !important;
+}
+
+.select2-container--bootstrap-5.select2-container--open .select2-selection {
+    box-shadow: none;
+    border: var(--bs-border-width) solid #1f62d1;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown {
+    border-color: #1f62d1 !important;
+}
+
+.select2-container--bootstrap-5
+    .select2-dropdown
+    .select2-search
+    .select2-search__field {
+    font-size: 0.875rem;
+}
+
+/* div.dt-container .dt-paging .dt-paging-button:hover {
+color: white !important;
+background: linear-gradient(135deg, #007bff, #0056b3) !important;
+border: none !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current {
+color: white !important;
+background: linear-gradient(135deg, #007bff, #0056b3) !important;
+border: none !important;
+} */
+
+.badge-outline {
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #007bff;
+}
+
+.badge-hover:hover {
+    background: linear-gradient(90deg, #ff8c00, #ff0080);
+    color: white;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 0, 128, 0.3);
+}
+
+.badge-glow {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff4d4d, 0 0 20px #ff4d4d;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.8);
+}
+
+.badge-custom {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    font-size: 12px !important;
+    padding: 5px 10px !important;
+    border-radius: 50px !important;
+    letter-spacing: 0.5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+/* Custom untuk bg-danger (Merah) */
+.bg-danger {
+    background: linear-gradient(135deg, #ff4d4d, #ff0000);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom untuk bg-primary (Biru) */
+.bg-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom untuk bg-warning (Kuning) */
+.bg-warning {
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    color: black;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Custom untuk bg-secondary (Abu-abu) */
+.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom untuk bg-info (Biru Muda) */
+.bg-info {
+    background: linear-gradient(135deg, #17a2b8, #007b8f);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0fb294;
+    --bs-btn-border-color: #0fb294;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0fb294;
+    --bs-btn-hover-border-color: #0fb294;
+    --bs-btn-focus-shadow-rgb: 54, 227, 196;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0fb294;
+    --bs-btn-active-border-color: #0fb294;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0fb294;
+    --bs-btn-disabled-border-color: #0fb294;
+}
+
+.custom-accordion .accordion-item {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Accordion */
+.custom-accordion .accordion-button {
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #1e3a8a
+    ); /* Gradient biru lebih halus */
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 8px;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #1e3a8a, #122e66);
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:hover {
+    background: linear-gradient(135deg, #1e40af, #0f265b);
+}
+
+.custom-accordion .accordion-body {
+    background: #f8f9fa;
+    padding: 18px;
+    border-left: 4px solid #3b82f6;
+    font-size: 15px;
+}
+
+/* Panah putih */
+.custom-accordion .accordion-button::after {
+    filter: invert(1); /* Mengubah warna ikon panah menjadi putih */
+}
+
+/* Animasi transisi lebih halus */
+.accordion-collapse {
+    transition: height 0.15s ease-out;
+}
+
+.custom-accordion .accordion-button::after {
+    filter: none !important;
+}
+
+.custom-check {
+    display: flex; /* Sejajarkan checkbox dan label */
+    align-items: start; /* Pastikan checkbox di bagian atas label */
+    gap: 10px; /* Beri jarak antara checkbox dan teks */
+    max-width: 100%; /* Mencegah elemen melebar */
+    flex-wrap: wrap; /* Pastikan elemen tidak keluar dari container */
+}
+
+.checkbox-lg .custom-check-input {
+    transform: scale(1.4); /* Perbesar checkbox */
+    margin-top: 4px; /* Atur posisi agar sejajar dengan teks */
+}
+
+.checkbox-lg .custom-check-label {
+    cursor: pointer;
+    line-height: 1.4; /* Sesuaikan tinggi teks agar rapi */
+    flex: 1; /* Pastikan label menggunakan sisa ruang */
+    font-size: 14px;
+}
+
+/* Styling container utama datepicker */
+.ui-datepicker {
+    background: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", sans-serif;
+    width: auto;
+}
+
+/* Header datepicker */
+.ui-datepicker-header {
+    background: transparent;
+    color: #333;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Styling tombol navigasi (prev & next) */
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    top: 10px !important;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Styling dropdown bulan dan tahun */
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Styling table kalender */
+.ui-datepicker-calendar {
+    width: 100%;
+}
+
+/* Styling hari dalam kalender */
+.ui-datepicker-calendar th {
+    font-weight: bold;
+    color: #666;
+    padding-bottom: 5px;
+}
+
+/* Styling angka tanggal */
+.ui-datepicker-calendar td {
+    text-align: center;
+    padding: 5px;
+}
+
+/* Styling angka tanggal yang bisa dipilih */
+.ui-datepicker-calendar td a {
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+/* Hover efek untuk tanggal */
+.ui-datepicker-calendar td a:hover {
+    background: #e0e0e0 !important;
+    color: black !important;
+}
+
+/* Tanggal yang dipilih */
+.ui-datepicker-calendar .ui-state-active {
+    background: #f4f4f4 !important;
+    color: black !important;
+    border-radius: 5px;
+}
+
+/* Styling untuk dropdown select2 */
+.select2-container--bootstrap-5 .select2-selection--single {
+    padding: 8px 15px; /* Menambah ruang padding */
+    font-size: 14px; /* Menyesuaikan ukuran font */
+    border-radius: 6px; /* Memberikan efek melengkung */
+    border: 1px solid #ccc;
+}
+
+/* Styling untuk list dalam dropdown */
+.select2-container--bootstrap-5 .select2-results__option {
+    padding: 10px; /* Memberikan jarak antar opsi */
+    font-size: 14px;
+}
+
+/* Styling untuk hover pada opsi dropdown */
+.select2-container--bootstrap-5 .select2-results__option--highlighted {
+    background-color: #007bff !important; /* Warna biru saat dihover */
+    color: white !important;
+}
+
+/* Styling untuk optgroup label */
+.select2-container--bootstrap-5 .select2-results__group {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Mengatur tampilan dropdown agar lebih lebar */
+.select2-dropdown {
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* Jika ingin memberi jarak antar item */
+.select2-container--bootstrap-5 .select2-results__option:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.select2-container--bootstrap-5
+    .select2-dropdown
+    .select2-results__options
+    .select2-results__option {
+    margin-top: 5px;
+}
+
+/* Style untuk Tab */
+.nav-tabs {
+    border-bottom: none;
+    display: flex;
+    width: 100%;
+}
+
+.nav-tabs .nav-item {
+    flex: 1;
+}
+
+.nav-tabs .nav-link {
+    text-align: center;
+    width: 100%;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #007bff;
+    border-radius: 12px 12px 0 0;
+    transition: 0.3s;
+    background: transparent; /* Tidak berwarna saat tidak aktif */
+}
+
+.nav-tabs .nav-link.active {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+/* Hover Effect */
+.nav-tabs .nav-link:not(.active):hover {
+    color: #0056b3;
+}
+
+/* Styling dropdown show/hide */
+.dropdown-menu-columns {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.dropdown-menu-columns a {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #17a2b8;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.dropdown-menu-columns a:hover {
+    background-color: #138496;
+}
+
+.dt-layout-row label {
+    font-size: 12px;
+}
+
+.toggle-item {
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    /* background-color: #007bff; */
+    color: white;
+}
+
+.toggle-item.active-toggle {
+    background: #e7e7e7 !important;
+    color: black !important;
+}
+
+/* Custom Scrollbar untuk Dropdown */
+.dropdown-menu-columns {
+    max-height: 300px; /* Batasi tinggi dropdown */
+    overflow-y: auto; /* Aktifkan scroll vertikal */
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: #007bff #f1f1f1; /* Warna scroll */
+}
+
+/* Custom Scrollbar untuk Chrome, Edge, dan Safari */
+.dropdown-menu-columns::-webkit-scrollbar {
+    width: 6px; /* Lebar scrollbar */
+}
+
+.dropdown-menu-columns::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Warna track */
+    border-radius: 5px;
+}
+
+.dropdown-menu-columns::-webkit-scrollbar-thumb {
+    background: #007bff; /* Warna thumb (handle) */
+    border-radius: 5px;
+}
+
+.dropdown-menu-columns::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Warna thumb saat hover */
+}
+
+.timeline {
+    position: relative;
+    padding: 40px 50px;
+    white-space: nowrap;
+    overflow-x: auto;
+    display: flex;
+    min-width: 100%;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 110;
+    /* width: 140%; */
+    height: 3px;
+    background: #0d6efd;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.timeline-step {
+    position: relative;
+    text-align: center;
+    width: 180px;
+    vertical-align: top;
+    display: inline-block;
+    top: 20px;
+    /* background: red; */
+}
+
+.timeline-step:nth-child(odd) {
+    margin-top: -25px;
+    /* Naikkan langkah ganjil */
+}
+
+.timeline-step:nth-child(even) {
+    margin-top: 40px;
+    /* Turunkan langkah genap */
+}
+
+.timeline-step .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 4px solid #0d6efd;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+.timeline-step.active .circle {
+    background: #0d6efd;
+    color: white;
+}
+
+.timeline-step .line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+    background: #0d6efd;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.timeline-step p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.timeline-step .badge {
+    font-size: 10px;
+    padding: 5px 8px;
+}
+
+.timeline {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.timeline:hover {
+    scrollbar-color: #0d6efd #f0f0f0;
+}
+
+/* Untuk Chrome, Edge, dan Safari */
+.timeline::-webkit-scrollbar {
+    height: 8px;
+    display: none;
+}
+
+.timeline:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.dataTables_scrollBody {
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.dataTables_scrollBody:hover {
+    scrollbar-color: #0d6efd #f0f0f0;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    display: none;
+}
+
+.dataTables_scrollBody:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 10px;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb:hover {
+    background: #0b5ed7;
+}
+
+#search-template .InputContainer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        45deg,
+        rgba(13, 110, 253, 0.7),
+        rgba(0, 123, 255, 0.7)
+    );
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Menambahkan animasi */
+}
+
+#search-template .InputContainer:focus-within {
+    background: linear-gradient(
+        45deg,
+        rgba(0, 123, 255, 0.9),
+        rgba(13, 110, 253, 0.9)
+    ); /* Efek saat input aktif */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Efek saat input aktif */
+}
+
+#search-template .input {
+    width: 150px;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    caret-color: #ff5100; /* Warna kursor */
+    background: transparent; /* Transparan agar gradien terlihat */
+    color: #fff; /* Teks putih */
+    font-weight: bold; /* Teks tebal */
+    transition: all 0.3s ease; /* Efek saat input fokus */
+}
+
+#search-template .input:focus {
+    width: 170px; /* Membesarkan input saat fokus */
+}
+
+#search-template .input::placeholder {
+    color: #fff; /* Placeholder putih */
+    font-weight: bold; /* Placeholder tebal */
+}
+
+#search-template .labelforsearch {
+    cursor: text;
+    padding: 0px 12px;
+}
+
+#search-template .searchIcon {
+    width: 13px;
+}
+
+#search-template .searchIcon path {
+    fill: #fff; /* Warna putih untuk SVG */
+}
+
+#search-template .InputContainer:hover {
+    cursor: pointer; /* Mengubah cursor saat hover di seluruh kontainer */
+}
+
+/* Fokus otomatis saat input aktif */
+#search-template .InputContainer:focus-within .input {
+    background-color: rgba(0, 123, 255, 0.1); /* Efek saat fokus */
+}
+
+:root {
+    --bs-accordion-btn-active-icon-arrow-white: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    --bs-accordion-btn-active-icon-arrow-down-white: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-active-icon-arrow-white);
+}
+
+.accordion-button:after {
+    background-image: var(--bs-accordion-btn-active-icon-arrow-down-white);
+}
+
+@media (max-width: 844px) {
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-fluid,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-lg,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-md,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-sm,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-xl,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-xxl {
+        padding-top: calc(80px + 15px) !important;
+    }
+
+    .nav-sidebar {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 845px) and (max-width: 1024px) {
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-fluid,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-lg,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-md,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-sm,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-xl,
+    #main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+        .body-wrapper
+        > .container-xxl {
+        padding-top: calc(180px + 15px) !important;
+    }
+
+    .nav-sidebar {
+        width: 100% !important;
+    }
+}
+
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-fluid,
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-lg,
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-md,
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-sm,
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-xl,
+#main-wrapper[data-layout="vertical"][data-header-position="fixed"]
+    .body-wrapper
+    > .container-xxl {
+    padding-top: calc(120px + 15px);
+}
+
+/* Navbar Baru */
+.navbar .nav-link {
+    font-size: 14px !important;
+}
+
+/* Navbar responsif & fix width */
+.app-header {
+    background-color: white;
+    width: 100%;
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Sidebar Mobile */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+    padding: 15px;
+}
+
+.mobile-sidebar.show {
+    left: 0;
+}
+
+/* Dropdown Hover Effect */
+.fade-effect {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .fade-effect {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#NavWrap {
+    max-height: 60px !important;
+    min-height: 0px !important;
+}
+
+/* Jika di layar kecil, dropdown dibuat penuh */
+@media (max-width: 767px) {
+    .dropdown-menu.keep-inside-screen {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Pastikan toggle di mobile bekerja */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+}
+
+.app-header .container-fluid,
+.app-header .container-lg,
+.app-header .container-md,
+.app-header .container-sm,
+.app-header .container-xl,
+.app-header .container-xxl {
+    padding: 0 0;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    display: none;
+    position: absolute;
+    min-width: 200px; /* Sesuaikan lebar jika perlu */
+}
+
+.dropdown-submenu .dropdown-menu.dropdown-menu-end {
+    top: 0;
+    right: 100%;
+    left: auto;
+    margin-top: -1px;
+    display: none;
+    position: absolute;
+    min-width: 200px; /* Sesuaikan lebar jika perlu */
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Cegah submenu keluar dari layar */
+@media (min-width: 992px) {
+    .dropdown-menu-end {
+        right: 100%;
+        left: auto;
+    }
+}
+
+a.nav-link.small-text.active {
+    color: #005fc6;
+}
+
+#user-list {
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f1f1f1;
+}
+
+#user-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#user-list::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+#user-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.user-item:hover {
+    background: #007bff !important;
+    color: white;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    /* Jarak antar elemen */
+    padding-left: 0;
+    /* Hilangkan padding default */
+}
+
+#two-columns li {
+    flex: 1 1 45%;
+    /* 45% untuk dua kolom */
+    list-style-position: inside;
+    /* Menyesuaikan posisi bullet */
+}
+
+.form-check-input[type="radio"] {
+    border-radius: 50%;
+    transform: scale(1.1);
+    border: solid 1px gray;
+}
+
+.btn.btn-sm {
+    font-size: 0.765625rem !important;
+}
+
+/* PURPLE */
+.btn-purple {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-purple:hover {
+    background-color: #5a32a3;
+    color: white;
+}
+.btn-outline-purple {
+    background-color: transparent;
+    color: #6f42c1;
+    border: 1px solid #6f42c1;
+}
+.btn-outline-purple:hover {
+    background-color: #6f42c1;
+    color: white;
+}
+
+/* DARK GREEN */
+.btn-dark-green {
+    background-color: #218838;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-dark-green:hover {
+    background-color: #166327;
+    color: white;
+}
+.btn-outline-dark-green {
+    background-color: transparent;
+    color: #218838;
+    border: 1px solid #218838;
+}
+.btn-outline-dark-green:hover {
+    background-color: #218838;
+    color: white;
+}
+
+/* ORANGE */
+.btn-orange {
+    background-color: #fd7e14;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-orange:hover {
+    background-color: #e96b0d;
+    color: white;
+}
+.btn-outline-orange {
+    background-color: transparent;
+    color: #fd7e14;
+    border: 1px solid #fd7e14;
+}
+.btn-outline-orange:hover {
+    background-color: #fd7e14;
+    color: white;
+}
+
+/* MAROON */
+.btn-maroon {
+    background-color: #800000;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-maroon:hover {
+    background-color: #5a0000;
+    color: white;
+}
+.btn-outline-maroon {
+    background-color: transparent;
+    color: #800000;
+    border: 1px solid #800000;
+}
+.btn-outline-maroon:hover {
+    background-color: #800000;
+    color: white;
+}
+
+/* CYAN */
+.btn-cyan {
+    background-color: #17a2b8;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-cyan:hover {
+    background-color: #117a8b;
+    color: white;
+}
+.btn-outline-cyan {
+    background-color: transparent;
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+}
+.btn-outline-cyan:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* DARK GRAY */
+.btn-dark-gray {
+    background-color: #343a40;
+    color: white;
+    border-radius: 0.375rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.btn-dark-gray:hover {
+    background-color: #23272b;
+    color: white;
+}
+.btn-outline-dark-gray {
+    background-color: transparent;
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+.btn-outline-dark-gray:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.note-toolbar {
+    background-color: #132f69;
+    /* pastikan di atas semua layer lain */
+}
+
+.note-editable {
+    background-color: white !important;
+    /* pastikan di atas semua layer lain */
+}
+
+/* From Uiverse.io by ErzenXz */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 2px #ccc;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch-handle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    /* right: 35px; */
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -35px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa;
+    text-shadow: 1px 1px #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-handle {
+    transform: translateX(25px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px #05c46b;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch-background {
+    background-color: #05c46b;
+    box-shadow: inset 0 0 0 2px #04b360;
+}
+
+.toggle-switch input[type="checkbox"]:checked + .toggle-switch:before {
+    content: "On";
+    color: #05c46b;
+    right: -15px;
+}
+
+.toggle-switch
+    input[type="checkbox"]:checked
+    + .toggle-switch-background
+    .toggle-switch-handle {
+    transform: translateX(30px);
+}
+
+/* [data-title-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-title-tooltip]::before,
+[data-title-tooltip]::after {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: all 0.15s ease-in-out;
+    z-index: 10;
+}
+
+[data-title-tooltip]::before {
+    content: attr(data-title-tooltip);
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    top: auto;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    white-space: pre-line;
+    max-width: 250px;
+    line-height: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-title-tooltip]::after {
+    content: "";
+    border: 6px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: #333;
+    top: auto;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+[data-title-tooltip]:hover::before,
+[data-title-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+} */
+
+.tooltip-body {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    white-space: pre-line;
+    max-width: 250px;
+    line-height: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.tooltip-body.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #333;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+}
+
+/* Custom CSS */
+/* === Overlay === */
+.swal2-container {
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* === Popup Box === */
+.swal2-popup {
+    border-radius: 12px;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: "Poppins", sans-serif;
+    animation: popup-fade-in 0.22s cubic-bezier(0.35, 0.7, 0.3, 1) forwards;
+}
+
+/* === Title === */
+.swal2-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2f3185;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+/* === Content === */
+.swal2-html-container {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+/* === Confirm Button === */
+.swal2-confirm {
+    background-color: #2f3185 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 4px 10px rgba(47, 49, 133, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.swal2-confirm:hover {
+    background-color: #1f2265 !important;
+    transform: scale(1.03);
+}
+
+/* === Loader === */
+.swal2-loader {
+    border: 3px solid #eee;
+    border-top: 3px solid #2f3185;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 0.8s linear infinite;
+}
+
+/* === Animations === */
+@keyframes popup-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popup-fade-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Preserve transitions */
+.swal2-show {
+    animation: popup-fade-in 0.22s cubic-bezier(0.35, 0.7, 0.3, 1);
+}
+
+.swal2-hide {
+    animation: popup-fade-out 0.2s ease-in forwards;
+}
+
+/* TAMPILAN NAMA DAN LEMBAGA DI DASHBOARD */
+
+.profile-card {
+    position: relative;
+    padding: 1.75rem;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
+
+.profile-card-institution::before {
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 40%, #42a5f5 100%);
+}
+
+.profile-card-user::before {
+    background: linear-gradient(135deg, #00897b 0%, #4caf50 50%, #ffd600 100%);
+}
+
+.profile-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card:hover::before {
+    transform: scale(1.1);
+}
+
+.profile-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.profile-badge {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover .profile-badge {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(5deg) scale(1.05);
+}
+
+.profile-badge i {
+    font-size: 1.75rem;
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.profile-title {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    line-height: 1.3;
+}
+
+.profile-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.circle-1 {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    right: -30px;
+}
+
+.circle-2 {
+    width: 80px;
+    height: 80px;
+    bottom: -20px;
+    right: 40px;
+}
+
+.profile-card:hover .circle-1 {
+    transform: translate(10px, -10px) scale(1.1);
+}
+
+.profile-card:hover .circle-2 {
+    transform: translate(-10px, 10px) scale(1.2);
+}
+
+.profile-position {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+    font-weight: normal;
+}
+.profile-position-badge {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.35rem;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.profile-position-badge i {
+    font-size: 0.75rem;
+    margin-right: 0.4rem;
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-badge {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile-badge i {
+        font-size: 1.5rem;
+    }
+
+    .profile-title {
+        font-size: 1rem;
+    }
+
+    .profile-label {
+        font-size: 0.7rem;
+    }
+}
+
+.custom-dropdown {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    min-width: 200px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-dropdown li {
+    margin: 2px 0;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.custom-dropdown .dropdown-item i {
+    font-size: 18px;
+    color: #6c757d;
+    transition: color 0.2s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background: #f8f9fa;
+    color: #0d6efd;
+    transform: translateX(2px);
+}
+
+.custom-dropdown .dropdown-item:hover i {
+    color: #0d6efd;
+}
+
+.custom-dropdown .dropdown-item:active {
+    transform: translateX(2px) scale(0.98);
+}
+
+.btn-dropdown-print {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.btn-dropdown-print:hover {
+    background: #e9ecef !important;
+    transform: translateY(-1px);
+}
+
+.btn-dropdown-print:active {
+    transform: translateY(0);
+}
+
+.btn-dropdown-print i {
+    font-size: 18px;
+}
+
+.iframe-container {
+    min-height: 200px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.iframe-container iframe {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.iframe-container iframe.loaded {
+    opacity: 1;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}

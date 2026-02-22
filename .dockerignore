@@ -1,0 +1,26 @@
+# Exclude node modules and frontend build files
+node_modules
+vite.config.js
+package.json
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Exclude generated or runtime files
+vendor
+storage/*
+*.log
+*.cache
+*.tmp
+
+# Exclude development and configuration files
+<!-- .env -->
+README.md
+phpunit.xml
+.git
+.gitignore
+.gitattributes
+.editorconfig
+
+# Exclude Docker-related files not needed in the image
+docker-compose.yml

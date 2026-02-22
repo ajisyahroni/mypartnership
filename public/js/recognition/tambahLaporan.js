@@ -1,0 +1,68 @@
+$(document).ready(function () {
+    const formInput = $("#formInput");
+
+    formInput.on("submit", function (e) {
+        e.preventDefault();
+
+        let formData = new FormData(this);
+        showLoading("Menyimpan data...");
+
+        $.ajax({
+            url: formInput.attr("action"),
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: (response) => {
+                // Swal.fire({
+                //     icon: "success",
+                //     title: "Berhasil!",
+                //     text: response.message,
+                //     timer: 1000,
+                //     showConfirmButton: false,
+                // }).then(() => (window.location.href = response.route));
+                if (response.status) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Berhasil!",
+                        text: response.message,
+                        timer: 1000,
+                        showConfirmButton: false,
+                    }).then(() => {
+                        if (response.route) {
+                            window.location.href = response.route;
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Gagal!",
+                        text: response.message,
+                        timer: 1000,
+                        showConfirmButton: false,
+                    });
+                }
+            },
+            error: (xhr) => {
+                let errorMessages = "";
+                if (xhr.responseJSON?.errors) {
+                    Object.values(xhr.responseJSON.errors).forEach(
+                        (messages) => {
+                            errorMessages += messages.join("<br>") + "<br>";
+                        }
+                    );
+                }
+
+                Swal.fire({
+                    icon: "error",
+                    title: "Gagal Menyimpan",
+                    html:
+                        errorMessages ||
+                        xhr.responseJSON?.error ||
+                        xhr.responseText ||
+                        "Terjadi kesalahan tak terduga.",
+                });
+            },
+        });
+    });
+});

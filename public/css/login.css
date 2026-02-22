@@ -1,0 +1,432 @@
+body {
+    font-family: "Poppins", sans-serif;
+    /* background: linear-gradient(to right, #2d2f92 50%, #ffffff 50%); */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.left-section {
+    background-color: #262673;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    height: 90vh;
+    overflow: hidden;
+    /* border-bottom-left-radius: 50% 10%;
+                border-bottom-right-radius: 50% 10%; */
+    clip-path: polygon(
+        0 0,
+        100% 0%,
+        97% 33%,
+        100% 75%,
+        89% 100%,
+        55% 95%,
+        24% 100%,
+        0 97%
+    );
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.right-section {
+    padding: 2rem;
+    background: white;
+    position: relative;
+}
+
+/* .left-section img { */
+.left-section .mahasiswa-ums {
+    width: 100%;
+    border-radius: 50px;
+    clip-path: polygon(0 0, 100% 0, 95% 87%, 52% 97%, 0 92%);
+}
+
+.btn-download {
+    border: 2px solid #262673;
+    color: #262673;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.btn-download:hover {
+    background-color: #2d2f92;
+    color: white;
+}
+
+.right-section {
+    padding: 4rem 2rem;
+}
+
+.right-section h1 {
+    font-weight: 700;
+    color: #2d2f92;
+    font-size: 4rem;
+}
+
+.right-section p {
+    color: #333;
+    /* max-width: 400px; */
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-login {
+    background-color: #262673;
+    color: white;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-google {
+    background-color: #ea4335;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-google img {
+    height: 18px;
+    margin-left: 0.5rem;
+}
+
+.title-bar {
+    height: 6px;
+    width: 60px;
+    background-color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.horizontal-divider {
+    height: 1.5px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: white;
+        overflow: auto;
+    }
+
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        padding: 2rem;
+    }
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    /* Atau ubah ke warna yang sesuai */
+}
+.sebaran-mitra {
+    background-color: #291f71;
+    /* ungu gelap */
+    position: relative;
+}
+
+.sebaran-mitra .title-highlight {
+    width: 30px;
+    height: 4px;
+    background-color: #ffcd00;
+    /* kuning */
+}
+
+.sebaran-mitra h3 {
+    color: white;
+}
+
+.sebaran-mitra .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.display-number {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.summary-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #262673;
+}
+
+/* Custom CSS */
+/* === Overlay === */
+.swal2-container {
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* === Popup Box === */
+.swal2-popup {
+    border-radius: 12px;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: "Poppins", sans-serif;
+    animation: popup-fade-in 0.22s cubic-bezier(0.35, 0.7, 0.3, 1) forwards;
+}
+
+/* === Title === */
+.swal2-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2f3185;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+/* === Content === */
+.swal2-html-container {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+/* === Confirm Button === */
+.swal2-confirm {
+    background-color: #2f3185 !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 4px 10px rgba(47, 49, 133, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.swal2-confirm:hover {
+    background-color: #1f2265 !important;
+    transform: scale(1.03);
+}
+
+/* === Loader === */
+.swal2-loader {
+    border: 3px solid #eee;
+    border-top: 3px solid #2f3185;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 0.8s linear infinite;
+}
+
+/* === Animations === */
+@keyframes popup-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popup-fade-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Preserve transitions */
+.swal2-show {
+    animation: popup-fade-in 0.22s cubic-bezier(0.35, 0.7, 0.3, 1);
+}
+
+.swal2-hide {
+    animation: popup-fade-out 0.2s ease-in forwards;
+}
+.map-decorator {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.map-decorator .purple-bg {
+    background-color: #291f71;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.map-decorator .yellow-bg {
+    background-color: #fdb913;
+    clip-path: polygon(0 40%, 100% 100%, 0 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.map-decorator .white-bg {
+    background-color: #ffffff;
+    clip-path: polygon(100% 30%, 100% 100%, 20% 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#regions_div {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 600px;
+}
+.footer-section {
+    font-size: 12px;
+}
+
+.map-container {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 992px) {
+    #regions_div {
+        height: 350px !important;
+    }
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 576px) {
+    .map-container {
+        padding: 0.5rem;
+    }
+
+    #regions_div {
+        height: 250px !important;
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .curva-bg {
+        padding-top: 2.5rem !important;
+        height: 50vh !important;
+    }
+
+    .right-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-number {
+        font-size: 2rem;
+    }
+
+    #regions_div {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+    .curva-bg {
+        padding-top: 2.5rem !important;
+        height: 20vh !important;
+    }
+
+    .right-section h1 {
+        font-size: 2rem;
+    }
+
+    .left-section {
+        clip-path: none;
+    }
+
+    .display-number {
+        font-size: 3rem;
+    }
+
+    #regions_div {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px;
+    }
+
+    .mahasiswa-ums {
+        display: none;
+    }
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-login:hover {
+    color: #262673;
+    border: #262673 1px solid;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-google:hover {
+    color: #ea4335;
+    border: #ea4335 1px solid;
+}
+
+.btn-google svg {
+    fill: white;
+    transition: fill 0.3s ease;
+}
+
+.btn-google:hover svg {
+    fill: #ea4335;
+}
+
+/* Fade-in for description */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

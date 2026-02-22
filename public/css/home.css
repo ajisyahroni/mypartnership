@@ -1,0 +1,284 @@
+/* @media (max-width: 991.98px) { */
+@media (max-width: 1023px) {
+    .nav-sidebar {
+        display: none !important;
+    }
+
+    .menu-toggle-btn {
+        display: inline-block !important;
+    }
+}
+
+.menu-toggle-btn {
+    display: none;
+    margin-bottom: 1rem;
+}
+
+/* Modal styles */
+.menu-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-modal .menu-content {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.menu-modal .menu-content a {
+    display: block;
+    margin: 0.5rem 0;
+    color: #2f3185;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-modal .close-menu {
+    float: right;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESPONSIVE: Ubah layout sidebar dan konten untuk layar kecil */
+@media (max-width: 768px) {
+    .title-dashboard {
+        font-size: 18px;
+    }
+
+    .nav-sidebar .nav-link {
+        font-size: 14px;
+    }
+
+    .nav-sidebar .nav-link {
+        margin: 5px 0;
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 10px !important;
+    }
+
+    .content-area {
+        padding: 0 10px;
+    }
+
+    .content-section {
+        border: none;
+        padding: 10px;
+    }
+
+    #regions_div {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 300px;
+    }
+}
+
+.body-konten {
+    min-height: 100vh !important;
+}
+
+.nav-sidebar {
+    width: 200px;
+    background-color: #2d2f92;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+}
+
+.nav-sidebar.sticky {
+    background-color: #2d2f92;
+    border-radius: 10px;
+    width: 200px;
+    position: sticky;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 100%;
+}
+
+.nav-sidebar .nav-link {
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: background 0.3s;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.nav-sidebar .nav-link.active,
+.nav-sidebar .nav-link:hover {
+    background-color: white;
+    color: #2d2f92;
+}
+
+.content-area {
+    /* margin-left: 280px; */
+    /* padding: 20px; */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: white;
+    width: 100%;
+    border: 6px solid #2d2f92;
+    border-radius: 10px;
+    opacity: 1;
+    margin-bottom: 50px;
+}
+
+.ranking-card {
+    background-color: #f9f9f9;
+}
+
+.ranking-table thead {
+    background-color: orange;
+    color: #000;
+}
+
+.ranking-table th {
+    font-weight: bold;
+    color: #000;
+}
+
+.ranking-table td {
+    color: #000;
+}
+
+.ranking-table th,
+.ranking-table td {
+    border: 2px solid #000 !important;
+    /* Garis hitam */
+}
+
+.ranking-table {
+    border-collapse: collapse;
+    font-size: 14px;
+    /* Untuk menggabungkan garis */
+}
+
+.legend {
+    margin-top: 10px;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    background-color: gold;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.title-bar {
+    height: 6px;
+    width: 60px;
+    background-color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.title-dashboard {
+    color: #2d2f92;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Untuk browser berbasis WebKit (Chrome, Edge, Safari) */
+.table-wrapper::-webkit-scrollbar {
+    width: 6px;
+    /* Tipis */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #2d2f92;
+    /* Biru tua */
+    border-radius: 4px;
+}
+
+/* Hilangkan arrow atas dan bawah di beberapa browser (hanya WebKit-based) */
+.table-wrapper::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Firefox support */
+@-moz-document url-prefix() {
+    .table-wrapper {
+        scrollbar-width: thin;
+        scrollbar-color: #2d2f92 transparent;
+    }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffb600;
+    /* warna kuning bulat */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.point-box {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.platinum {
+    background: linear-gradient(135deg, #d4d4d4, #f5f5f5, #e0e0e0);
+    color: #333;
+}
+
+.gold {
+    background: linear-gradient(145deg, #ffdd57, #e6b800);
+    color: #333;
+}
+
+.silver {
+    background: linear-gradient(145deg, #d9d9d9, #bfbfbf);
+    color: #333;
+}
