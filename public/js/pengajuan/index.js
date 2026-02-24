@@ -150,6 +150,15 @@ $(document).ready(function () {
                 render: (data, type, row) =>
                     `<span class="text-dark fw-semibold mb-0">${data}</span>`,
             },
+            {
+                data: "created_at",
+                name: "created_at",
+                orderable: true,
+                render: (data, type, row) => {
+                    const formatted = new Date(data).toLocaleDateString('id-ID');
+                    return `<span class="text-dark fw-semibold mb-0">${formatted}</span>`
+                }
+            },
         ],
         createdRow: function (row, data, dataIndex) {
             $("td", row).addClass("border-bottom-0");

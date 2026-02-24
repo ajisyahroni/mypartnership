@@ -98,6 +98,7 @@
                                                 <th>Tahun Mulai Kerja Sama</th>
                                                 <th>Penandatangan</th>
                                                 <th>Status Kerja Sama</th>
+                                                <th>Tanggal ajuan</th>
                                             </tr>
                                         </thead>
                                         <tbody>
